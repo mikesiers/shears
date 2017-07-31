@@ -11,6 +11,19 @@ def estimated_errors(num_errors, num_records, confidence=25):
 
   This code has been appropriated from:
   https://gist.github.com/DavidWalz/8538435
+
+  Args:
+    num_errors (int): The number of errors.
+
+    num_records (int): The number of records.
+
+    confidence (int): The confidence level. For more information on what the
+      confidence level is, see Chapter 4 of the book:
+      C4.5 programs for machine learning.
+      https://books.google.com.au/books?isbn=1558602380
+
+  Returns:
+    (float): The estimated number of errors.
   """
 
   # Raise exceptions if any of the inputs are nonsensical.
