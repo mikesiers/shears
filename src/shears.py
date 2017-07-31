@@ -13,5 +13,6 @@ def estimated_errors(num_errors, num_records, confidence=25):
   https://gist.github.com/DavidWalz/8538435
   """
   num_correct = num_records - num_errors
-  upper_bound = scipy.stats.beta.ppf(1 - alpha/100, num_errors+1, num_correct)
+  significance = 1 - confidence / 100
+  upper_bound = scipy.stats.beta.ppf(significance, num_errors+1, num_correct)
   return upper_bound * num_records
